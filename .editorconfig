@@ -16,6 +16,6 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{html,groovy,java,xml,kt}]
+[*.{html,groovy,java,xml,kt,gradle}]
 indent_style = space
 indent_size = 4
