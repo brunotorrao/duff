@@ -11,6 +11,6 @@ import java.math.BigDecimal;
 @Data
 public class Temperature {
 
-    private BigDecimal min;
-    private BigDecimal max;
+    private Integer min;
+    private Integer max;
 }
