@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  beer:
+    build: .
+    restart: always
+    container_name: beer-container
+    ports:
+    - 8080:8080
+    working_dir: /
+    depends_on:
+    - beer-mongo
+
+  beer-mongo:
+    image: mongo
+    container_name: beer-mongo
+    hostname: beer-mongo
+    volumes:
+    - $HOME/data/beer-mongo-data:/data/db
+    - $HOME/data/beer-mongo-bkp:/data/bkp
+    restart: always
